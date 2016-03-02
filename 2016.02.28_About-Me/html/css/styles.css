@@ -1,0 +1,149 @@
+body {
+	background-color: #DFDFDF;
+    color: #363636;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    margin: 0em;
+}
+
+a {
+	color: #f8c646;
+	margin: 0em;
+	padding: 0em;
+	font-weight: bold;
+}
+
+h1 {
+	color: #DFDFDF;
+	text-align:	center;
+	font-size: 2.25em;
+	font-weight: normal;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0em;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 2em 0em 1em 0em;
+}
+
+h3 {
+	color: #b8b8b8;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	clear: left;
+	padding: 2em 0em 0em 0em;
+}
+
+div {
+	background-color: #363636;
+	clear: left;
+}
+
+p {
+
+}
+
+.header {
+	background-color: #363636;
+}
+
+.content {
+	background-color: #DFDFDF;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+span {
+	color: #b8b8b8;
+	font-style: italic;
+	font-size: .75em;
+}
+
+img {
+    background-color: #b8b8b8;
+}
+
+.logo {
+	text-align: center;
+	padding-bottom: 2em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+.zales {
+	border: solid .13em #363636;
+    padding: .25em;
+    width: 256px;
+    height: 256px;
+    float: left;
+	margin: 0em 1em .25em 0em;
+} 
+
+.about {
+    border: solid .13em #363636;
+    padding: .25em;
+    width: 256px;
+    height: 144px;
+    float: left;
+	margin: 0em 1em .25em 0em;
+}
+
+ul {
+	background-color: #DFDFDF;
+	margin: 0em;
+	padding-top: 0em;
+
+}
+
+li {
+	color: #e7e7e7;
+	font-size: 1em;
+	list-style-type: none;
+	padding-top: 1em;
+	clear: left;
+}
+
+ul li p {
+	color: #CC4420;
+	display: inline;
+	font-weight: bold;
+}
+
+.desc {
+	font-style:	normal;
+	font-weight: normal;
+	font-size: 1em;
+}
+
+.nav {
+	font-weight: bold;
+	color: #363636;
+	background-color: #cc4420;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	text-align: center;
+	padding: .5em 0em .5em 0em;
+	padding-bottom: .5em;
+	font-size: 1em;
+}
+
+.navlink {
+	display: inline;
+	padding: .5em;
+	list-style-type: none;
+}
+
+.footer {
+	background-color: #474747;
+	margin-top: 4em;
+	text-align: center;
+	padding: .5em 0em .25em 0em;
+}
+
+.footerlink {
+	display: inline;
+	padding: .25em;
+	margin: 0em;
+}
