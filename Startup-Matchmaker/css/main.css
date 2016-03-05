@@ -1,0 +1,301 @@
+/* ==========================================================================
+   Global Overrides
+  ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* ==========================================================================
+   Author's custom styles
+  ========================================================================== */
+
+/* 
+    SITE COLORS:
+
+    White - #ffffff
+    Light Grey - #D8E0DB
+    Dark Grey - #3B393A
+    Grey/Black(text color) - #080808
+    Yellow - #F5D449
+    Red - #DB3E42
+*/
+
+
+/* Global
+   ================================================================ */
+body {
+  color: #080808;
+  background-color: #3B393A;
+}
+
+/* Layout
+   ================================================================ */
+.page {
+  width: 1239px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+}
+
+.card-list {
+  width: 1239px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #D8E0DB;
+}
+
+
+.banner {
+  position: relative;
+  max-width: 100%;
+  float: left;
+}
+  
+/* not exactly sure how this ::before pseudo-element works, 
+or why it needs so many properties are necessary to pull 
+this off, but found this solution online. */
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 5px #3B393A;
+    -moz-box-shadow: inset 0 0 5px #3B393A;
+    -webkit-box-shadow: inset 0 0 5px #3B393A;
+  }
+
+.banner img {
+  float: left;
+}
+
+.blurb {
+  width: 488px;
+  height: 342px;
+  background-color: rgba(255,255,255,0.67);
+  position: absolute;
+  top: 38px;
+  left: 713px;
+  padding: 30px 46px 0px 46px;
+  box-shadow: 0 0 5px #3B393A;
+  -moz-box-shadow: 0 0 5px #3B393A;
+  -webkit-box-shadow: 0 0 5px #080808;
+}
+
+.info {
+  float: left;
+  width: 413px;
+  padding: 0px 36px 0px 36px;
+  border-right: solid 1px #D8E0DB;
+  margin: 26px 0px 6px 0px;
+  background-color: #FFFFFF;
+}
+
+.info-right {
+  float: left;
+  width: 413px;
+  padding: 0px 36px 0px 36px;
+  margin: 26px 0px 6px 0px;
+  background-color: #FFFFFF;
+}
+
+.card {
+  float: left;
+  width: 287px;
+  padding: 10px;
+  margin: 20px 0px 0px 20px;
+  background-color: #FFFFFF;
+}
+
+.thumbnail {
+  width: 100%;
+  font-family: 'Oswald', serif;
+  font-size: 24px;
+  color: #949494;
+  background-color: #CCCCCC;
+  padding: 116px 0px 116px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+
+
+.card ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card ul li {
+  display: inline;
+  line-height: 30px;
+  font-family: 'Source-Sans-Pro', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  display: inline;
+  padding: 5px 16px 5px 16px;
+  color: #FFFFFF;
+  background-color: #666666;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  margin: 0px;
+}
+
+
+/* Headings
+   ================================================================ */
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+  padding-left: 40px;
+  display: inline;
+}
+
+h2 {
+  font-family: 'Source-Sans-Pro', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 25px;
+}
+
+
+/* Text Styles
+   ================================================================ */
+.tagline {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 25px;
+  text-align: center;
+  border-top: solid 1px #AAAAAA;
+  margin: 0px;
+  padding: 16px 0px 16px 0px;
+  background-color: #D8E0DB;
+}
+
+p {
+  font-family: 'Source-Sans-Pro', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 8px;
+}
+
+.name {
+  margin: 15px 0px 0px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.this {
+  background-color: #666666;
+}
+
+
+/* Header
+   ================================================================ */
+
+header {
+  background-color: #3B393A;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: solid 4px #F5D449;
+}
+
+header a {
+  color: #FFFFFF;
+
+}
+
+
+/* Footer
+   ================================================================ */
+
+footer {
+  clear: left;
+  margin-top: 20px;
+  background-color: #3B393A;
+  padding-top: 16px;
+  padding-bottom: 5px;
+}
+
+footer p {
+  color: #FFFFFF;
+  font-size: 20px;
+  padding-left: 40px;
+}
+
+/* Navigation
+   ================================================================ */
+
+header nav {
+  float: right;
+}
+
+header ul {
+  padding-right: 24px;
+  padding-top: 5px;
+  margin: 0px;
+}
+
+header ul li {
+  font-family: 'Source-Sans-Pro', sans-serif;
+  font-size: 20px;
+  display: inline;
+  padding: 27px 16px 21px 16px;
+}
+
+header ul li strong {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* Buttons
+   ================================================================ */
+
+section a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding: 12px 0px 8px 0px;
+  color: #080808;
+  background-color: #D8E0DB;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-bottom: solid 3px #B3BBB7;
+  margin: 30px 0px 25px 0px;
+}
+
+.action {
+  color: #FFFFFF;
+  background-color: #DB3E42;
+  border-bottom: solid 3px #A82E2C;
+}
+
+.contact {
+  color: #FFFFFF;
+  background-color: #DB3E42;
+  border-bottom: solid 3px #A82E2C;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 15px 0px 0px 0px;
+}
+
