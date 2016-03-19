@@ -59,7 +59,7 @@ $('#celsius_to_fahrenheit').on('click', function () {
 
 	} else {
 
-	// run the getCelsius function and store the result in a converted value
+	// run the getFahrenheit function and store the result in a converted value
 	var convertedValue = getFahrenheit(userValue);
 
 	// display the result
