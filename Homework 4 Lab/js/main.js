@@ -39,6 +39,7 @@ $('#fahrenheit_to_celsius').on('click', function () {
 
 	// change the color of the background based on fahrenheit
 	changeBackgroundColor(userValue);
+
 	}
 
 });
@@ -94,15 +95,20 @@ function getFahrenheit(celsius) {
 	fahrenheit = fahrenheit.toFixed(2);
 
 	return fahrenheit;
+
 }
 
 function clearField() {
+
 	$('#temperature').val('');
+
 }
 
 function displayError() {
+	
 	$('.error-message').show();
 	$('#temperature').addClass('error');
+
 }
 
 function resetPage() {
@@ -113,6 +119,7 @@ function resetPage() {
 
 	// remove the color background of <body>
 	$('body').removeClass();
+
 }
 
 function changeBackgroundColor(fahrenheit) {
