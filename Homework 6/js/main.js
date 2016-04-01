@@ -5,26 +5,47 @@ $('.hamburger-icon').on('click', function (e) {
   //if hamburger-icon is open (x), then show the main-nav
   if ( $(this).hasClass('active') ){
   	$('.main-navigation').show();
-  	$('.main-navigation').css('display: block');
   }else{
   	  // if not, then hide the main-nav
   	$('.main-navigation').hide();
-  	$('.main-navigation').css('display: none');
   }
   
 });
 
-/* close the hamburger menu (x) when resizing the window
+// close the hamburger menu (x) when resizing the window ??
 
 $(window).resize(function(){
-    // hamburger-icon is "active"
-    if ( $('.hamburger-icon').hasClass('active') ){
+	//console.log($(window).width());
 
-    	console.log('hambuger menu is open')
-  		$('.hamburger-icon').toggleClass('active');
-    }
+	if ($(window).width() >= 1040) {
+		//console.log('show the main nav');
+		$('.main-navigation').show();
+  		$('.hamburger-icon').hide();
+	} else {
+		//console.log('hide the main nav');
+  		$('.main-navigation').hide();
+		$('.hamburger-icon').show();
+		if ( $('.hamburger-icon').hasClass('active') ){
+  			$('.hamburger-icon').toggleClass('active');
+  		}
+	}
 
 });
-*/
+
+$(window).ready(function(){
+	//console.log($(window).width());
+
+	if ($(window).width() >= 1040) {
+		//console.log('show the main nav');
+		$('.main-navigation').show();
+  		$('.hamburger-icon').hide();
+	} else {
+		//console.log('hide the main nav');
+  		$('.main-navigation').hide();
+		$('.hamburger-icon').show();
+	}
+
+});
+
 
 

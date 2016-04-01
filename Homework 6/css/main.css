@@ -156,10 +156,21 @@ header nav strong {
 }
 
 .hamburger-icon {
-        float: right;
-        margin: 1.0rem 0 0 0;
-        display: none;
-      }
+  float: right;
+  margin: 1.0rem 0 0 0;
+}
+
+/* hamburger-icon lines*/
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: #fbd334;
+  border-radius: 2.5rem;
+  margin-bottom: .32em;
+  opacity: 1;
+  /* 1. Set the transition property on the .line class */
+  transition: all 300ms ease;
+}
 
 
 
@@ -222,11 +233,11 @@ header nav strong {
 /* Responsive for Mobile */
 @media screen and (max-width: 1040px)
     {
+
       .main-navigation {
         width: 100%;
         padding: 0;
         margin: 0;
-        display: none;
       }
 
       h1{
