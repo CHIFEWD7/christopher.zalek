@@ -231,7 +231,7 @@ header nav strong {
 
 
 /* Responsive for Mobile */
-@media screen and (max-width: 1040px)
+@media screen and (max-width: 960px)
     {
 
       .main-navigation {

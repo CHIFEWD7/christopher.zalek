@@ -17,7 +17,7 @@ $('.hamburger-icon').on('click', function (e) {
 $(window).resize(function(){
 	//console.log($(window).width());
 
-	if ($(window).width() >= 1040) {
+	if ($(window).width() >= 960) {
 		//console.log('show the main nav');
 		$('.main-navigation').show();
   		$('.hamburger-icon').hide();
@@ -35,7 +35,7 @@ $(window).resize(function(){
 $(window).ready(function(){
 	//console.log($(window).width());
 
-	if ($(window).width() >= 1040) {
+	if ($(window).width() >= 960) {
 		//console.log('show the main nav');
 		$('.main-navigation').show();
   		$('.hamburger-icon').hide();
