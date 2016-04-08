@@ -9,7 +9,7 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="shortcut icon" type="img/ico" href="img/favicon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -25,7 +25,7 @@
 
             <header class="north clearfix">
                 <h1 class="logo">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="img/ggb-logo.png" alt="Gogobones" />
                 </a></h1>
                 <a href="#" class="hamburger-icon">
@@ -35,50 +35,66 @@
                 </a>
                 <nav class="main-navigation clearfix">
                     <ul>
-                        <li><b><a href="roll.html">Roll</a></b></li>
+                        <li><b><a href="#">Roll</a></b></li>
                         <li><b><a href="about.html">About</a></b></li>
                     </ul>
                 </nav>
             </header><!-- /.north -->
+
             <section class="banner clearfix">
                 <img src="img/ggb-banner.png" alt="banner" />
             </section>
+
             <section class="single-column clearfix">
-                <h1> Welcome to Gogobones...!</h1>
-                <div class="question">
-                    <div class="question-inner">
-                        <img src="img/question-1.png" alt="mad dash" />
-                        <p>Did you lose your bag of dice somewhere between the hotel and GenCon?</p>
+                <h1>Roll</h1>
+                <section class="roll-setup clearfix">
+                    <div class="setup-inner">
+                        <p>Specify the number of dice and select the die type. Use the Roll Settings menu to set up more advanced rolls.</p>
+                        <div class="clearfix">
+                            <h2 class="setup">Setup</h2>
+                            <p class="menu">
+                                <a href="#">Roll Settings</a>
+                            </p>
+                         </div>
+                         <div id="setup-set1" class="roll-line">
+                            <span class="label">Die Set 1:</span>
+                            <input type="qty" id="set1Qty"></input>
+                            <select id="set1Type"></select>
+                        </div>
+                        <div id="setup-set2" class="roll-line">
+                            <span class="label">Die Set 2:</span>
+                            <input type="qty" id="set2Qty"></input>
+                            <select id="set2Type"></select>
+                        </div>
+                        <div id="setup-modifier" class="roll-line">
+                            <span class="label">Modifier:</span>
+                            <input type="button" id="modOperand"></input><input type="qty" id="rollMod"></input>
+                        </div>
+                        <div class="text-center clearfix">
+                            <p>3d6 + 3</p>
+                            <button type="button">Roll...!</button>
+                        </div>
                     </div>
-                </div>
-                <div class="question">
-                    <div class="question-inner">
-                        <img src="img/question-2.png" alt="space ranger" />
-                        <p>Is your space ranger leveling faster than your d6 collection can maintain?</p>
+                </section><!-- /.roll-setup -->
+                <section class="roll-results clearfix">
+                    <div class="results-inner clearfix">
+                        <h3>Results</h3>
+                        <div class="text-center clearfix">
+                            <p>3d6</p>
+                            <p class="tally">15</p>
+                            <p>Range: 6 - 21  | Median: 13.5</p>
+                        </div>
+                        <div>
+                            <p>Roll details:</p>
+                            <div class="results-details">
+                                <p> 3d6: ( 4 + 5 + 3 ) = 12</p>
+                                <p> Modifier: +3</p>
+                                <p>Total: ( 12 + [3] ) = 15</p>   
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="question">
-                    <div class="question-inner">
-                        <img src="img/question-3.png" alt="marathon" />
-                        <p>Has the first half of a tabletop weekend marathon left you unable to add?</p>
-                    </div>
-                </div>
+                </section><!-- /.roll-result -->
             </section><!-- /.single-column -->
-
-            <section class="get-rolling clearfix">
-                <div>
-                    <p><b>Gogobones can help! With Gogobones, you can quickly set up, fire off and tally any roll you need...!</b></p>
-                    <p><a class="button" href="">Start Rolling</a></p>
-                </div>
-            </section><!-- /.get-rolling -->
-
-            <section class="roll-counter">
-                <div>
-                    <p><b>Gogobones rolls to date:</b></p>
-                    <h1>1123</h1>
-                </div>
-            </section><!-- /.roll-counter -->
-
             <footer class="south clearfix">
                 &copy; 2015 Christopher Zalek <span>|</span> <a href="https://twitter.com/chriszalek" target="_blank"><img src="img/icon-tw.png" height="28" width="28" alt="Twitter"></a>
             </footer><!-- /.south -->

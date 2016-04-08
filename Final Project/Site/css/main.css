@@ -1,4 +1,5 @@
-/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+ 
+ /*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -11,9 +12,24 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    content: ".";
+
+    visibility: hidden;
 }
 
 /*
@@ -94,21 +110,548 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #0a1a64;
+    background-image: url("../img/site-bkg.png");
+    background-repeat: repeat-x;
+    background-color: #c7e0ea;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 1.7rem;
+    color: #0a1a64;
+    margin: 0 1.0rem 0.75rem 1.0rem;
+
+}
+
+h2{
+    margin: 2.0rem 0 1.25rem 0;
+    color: #0a1a64;
+}
+
+p{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #6e738a;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0 0 10px 0;
+}
+
+p:last-child{
+    margin-bottom: 1.5rem;
+}
+
+/* Layout */
+
+ul, li{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
 
 
+.site{
+    max-width: 960px;    
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+}
+
+.single-column,
+.double-column,
+.get-rolling,
+.roll-counter,
+.south{
+    /*border: 1px solid #ccc;*/
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.north{
+    background-color: #0a1a64;
+    border-bottom: solid 4px #fbd334;
+}
+
+.logo{
+    float: left;
+    font-size: 0.875rem;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 15px 30px;
+    padding: 0;
+}
+
+/* Navigation
+   ================================================================ */
+nav {
+  float: right;
+  padding-left: 1.5rem;
+  text-align: right;
+  margin: 0 1.5rem 0 0;
+}
+
+main-navigation {
+  display: block;
+}
+
+nav li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #6981ee;
+  padding: 37px 20px 21px 20px;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #6981ee;
+}
 
 
+/* Layouts - Single-Colunn
+   ================================================================ */
+.single-column .question{
+    width: 33.33%;
+    float: left;
+    padding: 5px;
+    color: #5d73d6;
+    font-size: 0.75rem;
+}
+
+.single-column .question p{
+    color: #5d73d6;
+}
+
+.single-column{
+    padding: 2.0rem 1.0rem 0rem 1.0rem;
+}
+
+.single-column .question .question-inner{
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+
+}
+
+.single-column .question .question-inner img{
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+
+}
+
+.get-rolling p,
+.roll-counter p{
+
+    font-size: 1.1rem;
+    padding: 0 0.5rem 0 0.5rem;
+    color: #0a1a64;
+    font-weight: bold;
+}
 
 
+.roll-counter {
+    margin-bottom:  1.25rem;
+
+}
+
+.single-column .roll-setup {
+    float: left;
+    width: 60%;
+    padding: 5px;
+}
+
+.single-column .roll-results {
+    float: right;
+    width: 40%;
+    padding: 5px;
+}
+
+.single-column .roll-setup .setup-inner,
+.single-column .roll-results .results-inner {
+    border: 1px solid #ccc; 
+    padding: 10px;
+}
+
+.setup{
+    float: left;
+    display: inline;
+}
+
+.menu {
+    float: right;
+    display: inline;
+}
+
+.roll-line{
+    margin: 0 0 10px 0;
+
+}
+
+.text-center{
+    text-align: center;
+}
+
+.results-inner .text-center{
+    padding: 1.5rem 1rem;
+    border-top: solid 1px #bf9000;
+    border-bottom: solid 1px #bf9000;
+    margin: 0 0 1rem 0;
+
+}
+
+.single-column .roll-results .results-inner{
+    /*border: 1px solid #ccc;*/
+    margin: 0 0.75rem 0 0.75rem;
+    padding: 1.0rem;
+    background-color: #fff2cc;=
+}
+
+.results-inner h3{
+  color: #bf9000;
+  font-size: 1.25rem;
+}
+
+.results-inner p{
+  color: #bf9000;
+}
+
+.formula{
+  margin: 0 0 1.5rem 0;
+}
+
+.range{
+  margin: 1.5rem 0 0 0;
+}
+
+.tally{
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1.5rem 0rem;
+}
+
+.results-details{
+  background-color: #ffe599;
+  border: solid 1px #bf9000;
+  padding: 0.5rem;
+}
+
+.get-rolling,
+.roll-counter, 
+.south{
+    text-align: center;
+}
+
+/* Layouts - Double-Colunn
+   ================================================================ */
+
+.double-column{
+}
+
+.double-column .west{
+    float: left;
+    width: 60%;
+    padding: 1.0rem 0 0 0.5rem;
+
+}
+
+.double-column .east{
+    float: right;
+    width: 40%;
+    padding: 1.5rem 0.5rem 0 0;
+}
+
+.double-column .west .west-inner{
+    /*order: 1px solid #ccc;*/
+    margin: 0 0.25rem 0 0.75rem;
+    padding: 0.25rem;
+}
+
+.double-column .west .west-inner h1{
+    margin: 0 0 1.75rem 0;
+}
+
+.west-inner ul{
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0.5rem;
+}
+
+.west-inner ul li{
+    color: #0a1a64;
+    list-style-type: none;
+    line-height: 1.8rem;
+
+}
+
+.west-inner ul li a{
+    color: #5d73d6;
+    text-decoration: none;
+}
+
+#img-dice{
+    width: 100%;
+    margin: 0 0 1.0rem 0;
+}
+
+#img-cz{
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0 1.0rem 0.5rem 0;
+}
+
+.double-column .east .east-inner{
+    /*border: 1px solid #ccc;*/
+    margin: 0 0.75rem 0 0.75rem;
+    padding: 1.0rem;
+    background-color: #d9ead3;
+}
+
+.east-inner h3{
+  color: #38761d;
+  font-size: 1.25rem;
+}
+
+.east-inner p{
+  color: #38761d;
+}
+
+.east-inner input{
+  width: 100%; 
+  margin: 2px 0px 20px 0px;
+  outline: 1px solid #15b832;
+  color: #38761d;
+  padding: 5px;
+  font-size: 1.0rem
+}
+
+.east-inner input:focus{
+  outline: 2.5px solid #38761d;
+}
+
+.east-inner textarea{
+  width: 100%; 
+  margin: 2px 0px 10px 0px;
+  outline: 1px solid #15b832;
+  color: #38761d;
+  padding: 5px;
+  font-size: 1.0rem;
+  height: 100px;
+}
+
+.east-inner textarea:focus{
+  outline: 2.5px solid #38761d;
+}
+
+.east-inner label{
+  color: #38761d;
+  font-size: 1rem;
+}
+
+.formButton {
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 1rem;
+      padding: 0.5rem;
+      text-align: center;
+      width: 50%;
+      color: #fff;
+      text-decoration: none;
+      background: #15b832;
+      border: none;
+}
+
+.south{
+    background-color: #4eb6cf;
+    color: #fff;
+    padding: 1.1rem;
+    font-size: 1.0rem;
+    margin: .5rem 0 .5rem 0;
+}
+
+.south span{
+    color: #9fecff;
+}
+
+/* Banner */
+
+.banner{
+  border-top: solid 5px #fff;
+
+}
+
+/* Buttons
+   ================================================================ */
+.button,
+.button:visited {
+      font-family: Helvetica, Arial, sans-serif;
+      display: inline-block;
+      width: 33.33%;
+      padding: 1.0rem;
+      margin: 2.0rem;
+      text-align: center;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.25rem;
+      background: #15b832;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+}
+
+.hamburger-icon {
+      float: right;
+      display: none;
+      margin: 1.75rem 1.5rem 0 0;
+}
+
+/* hamburger-icon lines*/
+.line {
+      width: 2.5rem;
+      height: .3125rem;
+      background: #fbd334;
+      border-radius: 2.5rem;
+      margin-bottom: .32em;
+      opacity: 1;
+      /* 1. Set the transition property on the .line class */
+      transition: all 300ms ease;
+}
 
 
+/* Mobile Layout */
+@media screen and (max-width: 780px)
+    {
 
+    .north {
+        padding-bottom: 0;
+    }
 
+    .logo {
 
+    }
 
+    nav{
+        padding: 0px;
+    }
 
+    .main-navigation {
+        width: 100%;
+        margin: 0;
+    }
 
+    .main-navigation ul {
+        overflow: hidden;
+        margin: 0;
+    }
 
+    .main-navigation ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    .single-column .question,
+    .single-column .roll-setup,
+    .single-column .roll-results{
+        float: left;
+        width: 100%;
+    }
+
+    .double-column .west{
+        width: 100%;
+    }
+
+    .double-column .east{
+        float: left;
+        width: 100%;
+    }
+
+    .double-column .west .west-inner{
+    /*border: 1px solid #ccc;*/
+    margin: 0 0 10px 0;
+    padding: 5px;
+
+    }
+
+    .double-column .east .east-inner{
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 5px;
+
+    }
+
+    h1{
+
+    }   
+
+    /* hamburger-icon lines*/
+      .line {
+        width: 2.5rem;
+        height: .3125rem;
+        background: #fbd334;
+        border-radius: 2.5rem;
+        margin-bottom: .32em;
+        opacity: 1;
+        /* 1. Set the transition property on the .line class */
+        transition: all 300ms ease;
+      }
+
+      /* Second line */
+      .active .line:nth-child(2) {
+        /* 2. When the active class is added to the .hamburger-icon, fade the middle line out (hint: you can use the 'opacity' property). */
+        opacity: 0;
+      }
+
+      /* Top line */
+      .active .line:first-child {
+        /* 3. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line 45 deg*/
+        -ms-transform: rotate(-45deg); /* IE 9 */
+          -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+          transform: rotate(-45deg);
+        /* 4. Use the CSS 'transform-origin' property to set the center of rotation.*/
+        -ms-transform-origin: 92% 50%; /* IE 9 */
+          -webkit-transform-origin: 92% 50%; /* Chrome, Safari, Opera */
+          transform-origin: 92% 50%;
+      }
+
+      /* Bottom line */
+      .active .line:last-child {
+        /* 5. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line -45 deg*/
+        -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+        /* 6. Use the CSS 'transform-origin' property to set the center of rotation.*/
+        -ms-transform-origin: 92% 50%; /* IE 9 */
+          -webkit-transform-origin: 92% 50%; /* Chrome, Safari, Opera */
+          transform-origin: 92% 50%;
+      }
+
+}
 
 
 /* ==========================================================================
