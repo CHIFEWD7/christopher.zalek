@@ -24,10 +24,9 @@
         <div class="site">
 
             <header class="north clearfix">
-                <h1 class="logo">
-                    <a href="index.html">
-                        <img src="img/ggb-logo.png" alt="Gogobones" />
-                </a></h1>
+                <a href="index.html">
+                        <span class="logo">Gogobones</span>
+                </a>
                 <a href="#" class="hamburger-icon">
                   <div class="line"></div>
                   <div class="line"></div>
@@ -36,43 +35,51 @@
                 <nav class="main-navigation clearfix">
                     <ul>
                         <li><b><a href="#">Roll</a></b></li>
-                        <li><b><a href="about.html">About</a></b></li>
+                        <li><b><a href="about.php">About</a></b></li>
                     </ul>
                 </nav>
             </header><!-- /.north -->
 
             <section class="banner clearfix">
-                <img src="img/ggb-banner.png" alt="banner" />
+                <div class="wrapper">
+                    <img src="img/ggb-banner.png" alt="banner" height="193"/>
+                </div>
             </section>
 
             <section class="single-column clearfix">
                 <h1>Roll</h1>
                 <section class="roll-setup clearfix">
-                    <div class="setup-inner">
+                    <div class="setup-inner clearfix">
                         <p>Specify the number of dice and select the die type. Use the Roll Settings menu to set up more advanced rolls.</p>
-                        <div class="clearfix">
-                            <h2 class="setup">Setup</h2>
-                            <p class="menu">
-                                <a href="#">Roll Settings</a>
-                            </p>
+                        <!-- /.north -->
+                        <div class="setup-header clearfix">
+                            <h2>Setup</h2>
+                            <a href="#" class="menu"><img src="" height="30" width="30" alt=""></a>
                          </div>
-                         <div id="setup-set1" class="roll-line">
-                            <span class="label">Die Set 1:</span>
-                            <input type="qty" id="set1Qty"></input>
-                            <select id="set1Type"></select>
+                         <div id="setup-set1" class="roll-line clearfix">
+                            <p class="label">Die Set 1:</p>
+                            <div>
+                                <input type="qty" id="set1Qty"></input>
+                                <select id="set1Type"></select>
+                            </div>
                         </div>
-                        <div id="setup-set2" class="roll-line">
-                            <span class="label">Die Set 2:</span>
-                            <input type="qty" id="set2Qty"></input>
-                            <select id="set2Type"></select>
+                        <div id="setup-set2" class="roll-line clearfix">
+                            <p class="label">Die Set 2:</p>
+                            <div>
+                                <input type="qty" id="set2Qty"></input>
+                                <select id="set2Type"></select>
+                            </div>
                         </div>
-                        <div id="setup-modifier" class="roll-line">
-                            <span class="label">Modifier:</span>
-                            <input type="button" id="modOperand"></input><input type="qty" id="rollMod"></input>
+                        <div id="setup-modifier" class="roll-line clearfix">
+                            <p class="label">Modifier:</p>
+                            <div>
+                                <input class="modButton" type="button" id="modOperand" value="+"></input>
+                                <input type="qty" id="rollMod"></input>
+                            </div>
                         </div>
-                        <div class="text-center clearfix">
+                        <div class="formula clearfix">
                             <p>3d6 + 3</p>
-                            <button type="button">Roll...!</button>
+                            <input class="roll-button" value="Roll" type="button">
                         </div>
                     </div>
                 </section><!-- /.roll-setup -->
@@ -80,9 +87,10 @@
                     <div class="results-inner clearfix">
                         <h3>Results</h3>
                         <div class="text-center clearfix">
-                            <p>3d6</p>
+                            <p>3d6 + 3</p>
                             <p class="tally">15</p>
-                            <p>Range: 6 - 21  | Median: 13.5</p>
+                            <p>Range: 6 - 21</p>
+                            <p>Median: 13.5</p>
                         </div>
                         <div>
                             <p>Roll details:</p>
@@ -96,7 +104,7 @@
                 </section><!-- /.roll-result -->
             </section><!-- /.single-column -->
             <footer class="south clearfix">
-                &copy; 2015 Christopher Zalek <span>|</span> <a href="https://twitter.com/chriszalek" target="_blank"><img src="img/icon-tw.png" height="28" width="28" alt="Twitter"></a>
+                &copy; 2015-16 Christopher Zalek <span>|</span> <a href="https://twitter.com/chriszalek" target="_blank"><img src="img/icon-tw.png" height="28" width="28" alt="Twitter"></a>
             </footer><!-- /.south -->
 
         </div><!-- /.site -->
