@@ -56,48 +56,47 @@
                             <h2>Setup</h2>
                             <a href="#" class="menu"><img src="" height="30" width="30" alt=""></a>
                          </div>
-                         <div id="setup-set1" class="roll-line clearfix">
-                            <p class="label">Die Set 1:</p>
-                            <div>
-                                <input type="qty" id="set1Qty"></input>
-                                <select id="set1Type"></select>
+                             <form>
+                             <div id="setup-set1" class="roll-line clearfix">
+                                <p class="label">Die Set 1:</p>
+                                <div>
+                                    <input type="qty" id="setOneQty" name="set1Qty" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )">
+                                    <select id="setOneType" name="s1Type" onchange="updateSet1Type()"></select>
+                                </div>
                             </div>
-                        </div>
-                        <div id="setup-set2" class="roll-line clearfix">
-                            <p class="label">Die Set 2:</p>
-                            <div>
-                                <input type="qty" id="set2Qty"></input>
-                                <select id="set2Type"></select>
+                            <div id="setup-set2" class="roll-line clearfix">
+                                <p class="label">Die Set 2:</p>
+                                <div>
+                                    <input type="qty" id="setTwoQty" name="set2Qty" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )">
+                                    <select id="setTwoType" name="s2dType" onchange="updateFormula()"></select>
+                                </div>
                             </div>
-                        </div>
-                        <div id="setup-modifier" class="roll-line clearfix">
-                            <p class="label">Modifier:</p>
-                            <div>
-                                <input class="modButton" type="button" id="modOperand" value="+"></input>
-                                <input type="qty" id="rollMod"></input>
+                            <div id="setup-modifier" class="roll-line clearfix">
+                                <p class="label">Modifier:</p>
+                                <div>
+                                    <input type="button" class="modButton" id="modOperand" name="modOperand" value="+" onclick="toggle(this);"></input>
+                                    <input type="qty" id="rollMod" name="modifier" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )"></input>
+                                </div>
                             </div>
-                        </div>
-                        <div class="formula clearfix">
-                            <p>3d6 + 3</p>
-                            <input class="roll-button" value="Roll" type="button">
-                        </div>
+                            <div class="formula clearfix">
+                                <p id="rollFormula">3d6 + 3</p>
+                                <input class="roll-button" value="Roll" type="submit" onclick="rollBonez()"><!-- /type was "button" -->
+                            </div>
+                        </form>
                     </div>
                 </section><!-- /.roll-setup -->
                 <section class="roll-results clearfix">
                     <div class="results-inner clearfix">
                         <h3>Results</h3>
                         <div class="text-center clearfix">
-                            <p>3d6 + 3</p>
-                            <p class="tally">15</p>
-                            <p>Range: 6 - 21</p>
-                            <p>Median: 13.5</p>
+                            <p id="resultFormula">Result: --</p>
+                            <p id="bonezTotal" class="tally">0</p>
+                            <p id="range">Range: --</p>
+                            <p id="median">Median: --</p>
                         </div>
                         <div>
                             <p>Roll details:</p>
-                            <div class="results-details">
-                                <p> 3d6: ( 4 + 5 + 3 ) = 12</p>
-                                <p> Modifier: +3</p>
-                                <p>Total: ( 12 + [3] ) = 15</p>   
+                            <div id="rollDetails" class="results-empty">   
                             </div>
                         </div>
                     </div>
@@ -115,6 +114,7 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/roll.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
