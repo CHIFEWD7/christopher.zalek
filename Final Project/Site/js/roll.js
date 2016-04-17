@@ -1,3 +1,6 @@
+// Variable to hold request
+var request;
+
 // Populate the die type selection sets and initialize quantity values
 var dieTypes = [ 2, 3, 4, 6, 8, 10, 12, 20, 100 ];
 var set1TypeSelect = document.getElementById('setOneType');
@@ -170,8 +173,71 @@ function runScript( event, text, ele ) {
 }
 
 // Roll 
-function rollBonez() {
 
+
+// Bind to the click event of the form
+$("#roll").click(function(){
+	console.log('click');
+	rollBonez();
+
+	//
+	// From http://stackoverflow.com/questions/5004233/jquery-ajax-post-example-with-php/5004276#5004276
+	// Abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $("#rollSetup");
+
+    // Let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+
+    // Let's disable the inputs for the duration of the Ajax request.
+    // Note: we disable elements AFTER the form data has been serialized.
+    // Disabled form elements will not be serialized.
+    $inputs.prop("disabled", true);
+
+    // fire off the request to /form.php  
+    // https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbwESEZYa2i446Nt3JYHslFRjr7BDx8LBiwxk-0AaOKfX3gY-6Y/exec",
+            type: "post",
+            data: serializedData
+        });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+
+    // Callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        // Reenable the inputs
+        $inputs.prop("disabled", false);
+    });
+
+    // Prevent default posting of form
+    event.preventDefault();
+
+    //
+});
+
+
+function rollBonez() {
 	// play sound
 	pting.play();
 
