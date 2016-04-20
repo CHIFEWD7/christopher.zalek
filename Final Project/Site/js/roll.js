@@ -324,7 +324,7 @@ function rollBonez() {
 	// rollPercent.innerHTML = percentage.toFixed(0) + "%";
 
 	if ( qSet2 > 0 || ( modNum > 0 )) {
-		detailsDiv.innerHTML += "<p><br><b>Total:</b> " + totalString + " ) = " + total + "</p>";
+		detailsDiv.innerHTML += "<p><b>Total:</b> " + totalString + " ) = " + total + "</p>";
 	}
 	
 	// rolls a Set of Dice
