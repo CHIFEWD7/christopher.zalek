@@ -36,7 +36,7 @@
                 <nav class="main-navigation clearfix">
                     <ul>
                         <li><b><a href="roll.html">Roll</a></b></li>
-                        <li><b><a href="#">About</a></b></li>
+                        <li><b><a href="about.php">About</a></b></li>
                     </ul>
                 </nav>
             </header><!-- /.north -->
@@ -69,21 +69,26 @@
                  </section><!-- /.west -->
 
                  <section class="east clearfix">
-                    <div class="east-inner">
-                        <h3 id="contact-us">Contact Us</h3>
-                        <p>We welcome feedback from our high-stakes rollers. Let us know how you are using Gogobones, along with any comments or suggestions, by filling out the form below.</p>
+                    <div class="east-inner clearfix">
+                        <div class="header-sidebar clearfix">
+                            <img class="header-icon" src="img/mail-icon.jpg" alt="die-icon" height="16" width="24" />
+                            <h3 id="contact-us">Contact Us</h3>
+                        </div>
+                        <p>We welcome feedback from our high-stakes rollers. Let us 
+                            know how you are using Gogobones, along with any 
+                            comments or suggestions, by filling out the form below.</p>
                         <div class="main">
                         <form method="post" action="about.php">
-                            <div><label>Name:</label><br>
+                            <div class="form-input"><label>Name:</label><br>
                             <input class="text" type="text" name="name" value=""><br>
                             <span class="error"><?php echo $nameError;?></span></div>
-                            <div><label>Email:</label><br>
+                            <div class="form-input"><label>Email:</label><br>
                             <input class="text" type="text" name="email" value=""><br>
                             <span class="error"><?php echo $emailError;?></span></div>
-                            <div><label>Subject:</label><br>
+                            <div class="form-input"><label>Subject:</label><br>
                             <input class="text" type="text" name="subject" value=""><br>
                             <span class="error"><?php echo $subjectError;?></span></div>
-                            <div><label>Message:</label><br>
+                            <div class="form-input" ><label>Message:</label><br>
                             <textarea name="message" val=""></textarea>
                             <span class="error"><?php echo $messageError;?></span><br>
                             <input class="formButton" type="submit" name="submit" value="Say Hello"><br>

@@ -149,6 +149,14 @@ h2{
     margin: 30px 0 15px 0;
 }
 
+h3{
+  display: inline;
+}
+
+.header-icon{
+  margin: 7px 2px 10px 0;
+}
+
 p,
 span{
     font-family: Helvetica, Arial, sans-serif;
@@ -471,7 +479,7 @@ nav a:hover {
 .single-column .roll-results .results-inner{
   /*border: 1px solid #ccc;*/
   margin: 0 10px 25px 10px;
-  padding: 20px 20px 30px 20px;
+  padding: 15px 20px 30px 20px;
   background-color: #FCE5CD;
 }
 
@@ -586,19 +594,22 @@ nav a:hover {
     /*border: 1px solid #ccc;*/
     border-radius: 8px;
     margin: 0 15px;
-    padding: 20px 20px 30px 20px;
+    padding: 15px 20px 30px 20px;
     background-color: #FFF2CC;
 }
 
+.double-column .east .east-inner p{
+   padding: 20px 0 10px 0;
+   border-top: solid 1px #f1c232;
+   color: #BF9000;
+}
+
 .east-inner h3{
-  color: #BF9000;
+  color: #f1c232;
   font-size: 25px;
   font-size: 1.25rem;
 }
 
-.east-inner p{
-  color: #BF9000;
-}
 
 .east-inner input[type=text]{
   width: 100%; 
@@ -632,7 +643,7 @@ nav a:hover {
   outline: 2.5px solid #F1C232;
 }
 
-.east-inner div{
+.east-inner .form-input{
   margin: 10px 0 0 0;
 }
 
@@ -714,7 +725,7 @@ nav a:hover {
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
-  background: #fbd334;
+  background: #29A9E1;
 }
 
 .hamburger-icon {
@@ -808,6 +819,11 @@ nav a:hover {
     .button,
     .button:visited {
         width: 75%;
+    }
+
+    .header-sidebar{
+        text-align: center;
+        margin: 0px;
     }
 
     .results-inner h3,
