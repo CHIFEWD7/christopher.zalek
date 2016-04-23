@@ -142,7 +142,7 @@ function updateRange() {
 
 	// Deliver the range
 	document.getElementById("range").innerHTML = "Range: " + rangeMin + " to " + rangeMax;
-	document.getElementById("median").innerHTML = "Median: " + (((rangeMax - rangeMin) / 2) + 1);
+	document.getElementById("median").innerHTML = "Median: " + (((rangeMax - rangeMin) / 2) + rangeMin);
 }
 
 function parseText( text, ele ) {
@@ -178,6 +178,10 @@ function runScript( event, text, ele ) {
 // Bind to the click event of the form
 $("#roll").click(function(){
 	console.log('click');
+
+	// play sound
+	pting.play();
+	
 	rollBonez();
 
 	//
@@ -238,8 +242,6 @@ $("#roll").click(function(){
 
 
 function rollBonez() {
-	// play sound
-	pting.play();
 
 	// update the Range and Median
 	updateRange();
