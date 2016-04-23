@@ -172,9 +172,44 @@ function runScript( event, text, ele ) {
     return true;
 }
 
+// Changing a die or modifier quantity
+	// Key press
+$("#setOneQty, #setTwoQty, #rollMod").keypress(function(){
+
+	return runScript( event, this.value, this.id );
+
+});
+	// Check the Value
+$("#setOneQty, #setTwoQty, #rollMod").change(function(){
+
+	parseText( this.value, this.id );
+
+});
+
+
+// Changing Die Set 1 type
+$("#setOneType").change(function(){
+
+	updateSet1Type();
+
+});
+
+// Changing Die Set 2 type
+$("#setTwoType").change(function(){
+
+	updateFormula();
+
+});
+
+// Toggling the modifier Operand
+$("#modOperand").click(function(){
+
+	toggle(this);
+
+});
+
+
 // Roll 
-
-
 // Bind to the click event of the form
 $("#roll").click(function(){
 	console.log('click');
@@ -184,7 +219,6 @@ $("#roll").click(function(){
 	
 	rollBonez();
 
-	//
 	// From http://stackoverflow.com/questions/5004233/jquery-ajax-post-example-with-php/5004276#5004276
 	// Abort any pending request
     if (request) {

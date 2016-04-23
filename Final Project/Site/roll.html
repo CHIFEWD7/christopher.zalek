@@ -59,22 +59,22 @@
                              <div id="setup-set1" class="roll-line clearfix">
                                 <p class="label">Die Set 1:</p>
                                 <div>
-                                    <input type="qty" id="setOneQty" name="set1Qty" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )">
-                                    <select id="setOneType" name="s1Type" onchange="updateSet1Type()"></select>
+                                    <input type="qty" id="setOneQty" name="set1Qty">
+                                    <select id="setOneType" name="s1Type"></select>
                                 </div>
                             </div>
                             <div id="setup-set2" class="roll-line clearfix">
                                 <p class="label">Die Set 2:</p>
                                 <div>
-                                    <input type="qty" id="setTwoQty" name="set2Qty" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )">
-                                    <select id="setTwoType" name="s2dType" onchange="updateFormula()"></select>
+                                    <input type="qty" id="setTwoQty" name="set2Qty">
+                                    <select id="setTwoType" name="s2dType"></select>
                                 </div>
                             </div>
                             <div id="setup-modifier" class="roll-line clearfix">
                                 <p class="label">Modifier:</p>
                                 <div>
-                                    <input type="button" class="modButton" id="modOperand" name="modOperand" value="+" onclick="toggle(this);"></input>
-                                    <input type="qty" id="rollMod" name="modifier" onkeypress="return runScript( event, this.value, this.id )" onchange="parseText( this.value, this.id )"></input>
+                                    <input type="button" class="modButton" id="modOperand" name="modOperand" value="+"></input>
+                                    <input type="qty" id="rollMod" name="modifier"></input>
                                 </div>
                             </div>
                             <div class="formula clearfix">
