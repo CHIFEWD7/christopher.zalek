@@ -173,6 +173,12 @@ function runScript( event, text, ele ) {
 }
 
 // Changing a die or modifier quantity
+	// Select the content on click
+$("#setOneQty, #setTwoQty, #rollMod").click(function(){
+
+	this.select();
+
+});
 	// Key press
 $("#setOneQty, #setTwoQty, #rollMod").keypress(function(){
 
