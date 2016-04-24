@@ -364,12 +364,13 @@ nav a:hover {
 .roll-line .label{
   display: inline-block;
   padding: 15px 0 0 0;
-  margin: 0;
+  margin: 0 0 0 10px;
 }
 
 .roll-line div {
   display: inline-block;
   float: right;
+  margin: 0 10px 0 0;
 }
 
 .roll-line input[type="qty"]{
@@ -805,11 +806,30 @@ nav a:hover {
       height: 157px;
     }
 
+    .single-column{
+      margin: 10px 0;
+    }
+
+    .single-column .question{
+      margin: 0;
+    }
+
+    .single-column .question .question-inner{
+      padding-bottom: 0;
+    }
+
     .single-column .question,
     .single-column .roll-setup,
     .single-column .roll-results{
         float: left;
         width: 100%;
+    }
+
+    .single-column .roll-results .results-inner .text-center,
+    .single-column .roll-results .results-inner .results-empty{
+      width: 79%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .single-column .question p{
@@ -841,6 +861,7 @@ nav a:hover {
     .double-column .east{
       float: left;
       width: 100%;
+      margin-bottom: 20px;
       padding: 0px 10px 0 10px;
     }
 
@@ -858,19 +879,6 @@ nav a:hover {
     } 
 
     /* hamburger-icon lines*/
-      .line {
-        width: 50px;
-        height: 6px;
-        border-radius: 50px;
-        width: 2.5rem;
-        height: .3125rem;
-        background: #fbd334;
-        border-radius: 2.5rem;
-        margin-bottom: .32em;
-        opacity: 1;
-        /* 1. Set the transition property on the .line class */
-        transition: all 300ms ease;
-      }
 
       /* Second line */
       .active .line:nth-child(2) {
@@ -946,6 +954,7 @@ nav a:hover {
       }
 
       .roll-line .label{
+        margin: 0;
         display: block;
         text-align: center;
       }
