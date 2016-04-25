@@ -481,7 +481,7 @@ nav a:hover {
   /*border: 1px solid #ccc;*/
   margin: 0 10px 0px 10px;
   padding: 15px 20px 9px 20px;
-  background-color: #E69138;
+  background-color: #FF9900;
   border-top-left-radius: 8px;
     -moz-border-radius-topleft: 8px;
     -webkit-border-top-left-radius: 8px;
@@ -504,7 +504,7 @@ nav a:hover {
 }
 
 .results-header h3{
-  color: #FCE5CD;
+  color: #FCF3E8;
   font-size: 25px;
   font-size: 1.25rem;
 }
@@ -624,7 +624,7 @@ nav a:hover {
 }
 
 .contact-header h3{
-  color: #fff2cc;
+  color: #FFFCF2;
   font-size: 25px;
   font-size: 1.25rem;
 }
