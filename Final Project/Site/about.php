@@ -69,11 +69,11 @@
                  </section><!-- /.west -->
 
                  <section class="east clearfix">
+                    <div class="contact-header clearfix">
+                        <img class="header-icon" src="img/mail-icon.jpg" alt="die-icon" height="24" width="36" />
+                            <h3>Contact Us</h3>
+                    </div>
                     <div class="east-inner clearfix">
-                        <div class="header-sidebar clearfix">
-                            <img class="header-icon" src="img/mail-icon.jpg" alt="die-icon" height="16" width="24" />
-                            <h3 id="contact-us">Contact Us</h3>
-                        </div>
                         <p>We welcome feedback from our high-stakes rollers. Let us 
                             know how you are using Gogobones, along with any 
                             comments or suggestions, by filling out the form below.</p>
