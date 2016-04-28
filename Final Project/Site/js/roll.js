@@ -66,6 +66,7 @@ function updateSet1Type() {
 		// console.log('die sets are equal')
 		removeOptions(document.getElementById("setTwoType"));
 		createSet2TypeList();
+		updateFormula();
 	}
 }
 
