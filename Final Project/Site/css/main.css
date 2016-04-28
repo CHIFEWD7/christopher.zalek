@@ -330,8 +330,8 @@ nav a:hover {
 }
 
 .setup-header{
-  margin: 25px 0;
-  padding: 25px 0 0 0;
+  margin: 25px 0 30px 0;
+  padding: 21px 0 0 0;
   border-top: solid 1px #ddd;
 }
 
@@ -339,6 +339,7 @@ nav a:hover {
   float: left;
   display: inline;
   margin: 0px;
+  padding: 4px 0 0 0;
 }
 
 .menu {
@@ -349,6 +350,9 @@ nav a:hover {
 
 /* Die Set Content - Field, Dropdown & Label
    ================================================================ */
+
+
+/* Roll lines */
 .roll-line{
   margin: 0 0 25px 0;
 
@@ -793,6 +797,52 @@ nav a:hover {
       transition: all 300ms ease;
 }
 
+/* Radio button */
+.dieSets-radio{
+  float: right;
+}
+
+.dieSets-radio p{
+  display: inline;
+  font-size: 20px;
+  font-size: 1rem;
+  color: #0a1a64;
+}
+
+.dieSets-radio input[type="radio"] {
+    display:none;
+}
+
+.dieSets-radio input[type="radio"] + label {
+  font-size: 20px;
+  font-size: 1rem;
+    color: #0a1a64;
+    cursor: pointer;
+}
+
+.dieSets-radio input[type="radio"] + label span {
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    margin:-1px 4px 0 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+/* The trick: border creates same look as the radio button usually have */
+/* remove it to see what happens */
+.dieSets-radio input[type="radio"] + label span {
+    background-color: #C9DAF8; /* have to be of the same color */
+    border: 3px solid #C9DAF8; /* have to be of the same color */
+}
+
+/* Checked state for radio */
+.dieSets-radio input[type="radio"]:checked + label span {
+     background-color: #253ba4;
+}
+
 
 /* Mobile Layout */
 @media screen and (max-width: 780px)
@@ -971,6 +1021,37 @@ nav a:hover {
 
 }
 
+@media screen and (max-width: 400px)
+    {
+
+      .roll-line .label{
+        margin: 0;
+        display: block;
+        text-align: center;
+      }
+
+      .roll-line div {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+      }
+
+      .roll-line input[type="qty"]{
+        margin: 0 1px;
+      }
+
+      .roll-line select{
+        margin: 0 1px;
+      }
+
+      .roll-line input[type="button"]{
+        margin: 0 1px;
+      }
+
+    }
+
+
 @media screen and (max-width: 375px)
     {
 
@@ -1012,31 +1093,6 @@ nav a:hover {
         margin-top: 10px;
       }
 
-      .roll-line .label{
-        margin: 0;
-        display: block;
-        text-align: center;
-      }
-
-      .roll-line div {
-        display: block;
-        text-align: center;
-        float: none;
-        margin: 0 auto;
-      }
-
-      .roll-line input[type="qty"]{
-        margin: 0 1px;
-      }
-
-      .roll-line select{
-        margin: 0 1px;
-      }
-
-      .roll-line input[type="button"]{
-        margin: 0 1px;
-      }
-
       .double-column .east .east-inner p,
       .double-column .east .east-inner form{
         width: 90%;
@@ -1044,8 +1100,7 @@ nav a:hover {
         margin-right: auto;
       }
 
-
-}
+    }
 
 
 /* ==========================================================================

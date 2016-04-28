@@ -50,11 +50,20 @@
                 <h1>Roll</h1>
                 <section class="roll-setup clearfix">
                     <div class="setup-inner clearfix">
-                        <p>Specify the number of dice and select the die type. Add a second die set or modifier to create advanced rolls.</p>
+                        <p>Specify the number of dice and select the die type. Include a second die set or modifier to create advanced rolls.</p>
                         <!-- /.north -->
                         <div class="setup-header clearfix">
                             <h2>Setup</h2>
-                         </div>
+                            <div class="dieSets-radio">
+                                  <div class="clearfix">
+                                    <p>Die Sets:</p>
+                                    <input type="radio" id="one" name="dieSet" value="one">
+                                    <label for="one"><span></span>1</label>
+                                    <input type="radio" id="two" name="dieSet" value="two">
+                                    <label for="two"><span></span>2</label>
+                                  </div>
+                            </div>
+                        </div>
                              <form id="rollSetup">
                              <div id="setup-set1" class="roll-line clearfix">
                                 <p class="label">Die Set 1:</p>
@@ -91,7 +100,7 @@
                     </div>
                     <div class="results-inner clearfix">
                         <div class="text-center clearfix">
-                            <p id="resultFormula">Result: --</p>
+                            <p id="resultFormula">Result ():</p>
                             <p id="bonezTotal" class="tally">0</p>
                             <p id="range">Range: --</p>
                             <p id="median">Median: --</p>

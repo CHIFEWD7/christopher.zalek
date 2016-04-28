@@ -15,7 +15,8 @@ createSet2TypeList();
 init();
 
 function init() {
-
+	$('#setup-set2').hide();
+	$('#one').prop('checked', true);
 	document.getElementById('setOneQty').value = 1;
 	document.getElementById('setTwoQty').value = 0;
 	document.getElementById('rollMod').value = 0;
@@ -51,12 +52,21 @@ function createSet2TypeList() {
 
 // Set 1 Updates
 function updateSet1Type() {
-	document.getElementById("setTwoQty").value = 0;
-	document.getElementById("modOperand").value = "+";
-	document.getElementById("rollMod").value = 0;
+	
+	var tSet1 = Number(document.getElementById("setOneType").value);
+	var tSet2 = Number(document.getElementById("setTwoType").value);
+
+	// document.getElementById("setTwoQty").value = 0;
+	// document.getElementById("modOperand").value = "+";
+	// document.getElementById("rollMod").value = 0;
+
+
 	updateFormula();
-	removeOptions(document.getElementById("setTwoType"));
-	createSet2TypeList();
+	if ( tSet1 == tSet2 ) {
+		// console.log('die sets are equal')
+		removeOptions(document.getElementById("setTwoType"));
+		createSet2TypeList();
+	}
 }
 
 
@@ -171,6 +181,34 @@ function runScript( event, text, ele ) {
     
     return true;
 }
+
+// Radio button behavior
+$('#one').click(function() {
+
+   if($('#one').is(':checked')) { 
+   	
+   	console.log("set 1 checked");
+	$('#setTwoQty').val(0);
+   	$('#setup-set2').hide();
+   	updateFormula();
+
+   	 }
+});
+
+$('#two').click(function() {
+
+   if($('#two').is(':checked')) { 
+   	
+   	console.log("set 2 checked");
+	$('#setTwoQty').val(1);
+   	$('#setup-set2').show(); 
+   	updateFormula();
+
+   }
+
+});
+
+
 
 // Changing a die or modifier quantity
 	// Select the content on click
