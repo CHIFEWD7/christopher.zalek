@@ -158,17 +158,18 @@ function updateRange() {
 
 function parseText( text, ele ) {
 
-	var qty1;
+	var qty;
 	var x = text;
 	var loc = String(ele);
-	var min = 0
+	var min = 1;
 
-	min = ( loc == "setOneQty" ) ? 1 : 0;
+	min = ( loc == "rollMod" ) ? 0 : 1;
 
-	qty1 = ( x && !isNaN( x ) ) ? parseInt ( x ) : min;
-	qty1 = Math.min ( Math.max (qty1, min), 99 );
+	qty = ( x && !isNaN( parseInt( x ) ) ) ? parseInt ( x ) : min;
+	// console.log(!isNaN(x));
+	qty = Math.min ( Math.max (qty, min), 99 );
 	
-	document.getElementById(loc).value = qty1;
+	document.getElementById(loc).value = qty;
 	document.getElementById(loc).blur();
 	updateFormula();
 }

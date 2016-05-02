@@ -36,7 +36,7 @@
                 <nav class="main-navigation clearfix">
                     <ul>
                         <li><b><a href="roll.html">Roll</a></b></li>
-                        <li><b><a href="about.php">About</a></b></li>
+                        <li class="nav-active"><b><a href="#">About</a></b></li>
                     </ul>
                 </nav>
             </header><!-- /.north -->
