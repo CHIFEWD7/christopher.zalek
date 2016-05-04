@@ -70,7 +70,7 @@
 
                  <section class="east clearfix">
                     <div class="contact-header clearfix">
-                        <img class="header-icon" src="img/mail-icon.jpg" alt="die-icon" height="24" width="36" />
+                        <img class="header-icon" src="img/mail-icon.png" alt="mail-icon" srcset="img/mail-icon.svg" height="20" width="30" />
                             <h3>Contact Us</h3>
                     </div>
                     <div class="east-inner clearfix">
