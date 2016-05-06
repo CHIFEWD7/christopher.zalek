@@ -80,27 +80,30 @@
                             <h3>Contact Us</h3>
                     </div>
                     <div class="east-inner clearfix">
-                        <p>We welcome feedback from our high-stakes rollers. Let us 
-                            know how you are using Gogobones, along with any 
-                            comments or suggestions, by filling out the form below.</p>
-                        <div class="main">
-                        <form method="post" action="about.php">
-                            <div class="form-input"><label>Name:</label><br>
-                            <input class="text" type="text" name="name" value=""><br>
-                            <span class="error"><?php echo $nameError;?></span></div>
-                            <div class="form-input"><label>Email:</label><br>
-                            <input class="text" type="text" name="email" value=""><br>
-                            <span class="error"><?php echo $emailError;?></span></div>
-                            <div class="form-input"><label>Subject:</label><br>
-                            <input class="text" type="text" name="subject" value=""><br>
-                            <span class="error"><?php echo $subjectError;?></span></div>
-                            <div class="form-input" ><label>Message:</label><br>
-                            <textarea name="message" val=""></textarea>
-                            <span class="error"><?php echo $messageError;?></span><br>
-                            <input class="formButton" type="submit" name="submit" value="Say Hello"><br>
-                            <span class="success"><?php echo $successMessage;?></span></div>
-                        </form>
-                </div>
+                        <p>We welcome feedback from our high-stakes rollers. Let us know how you are using Gogobones, along with any comments or suggestions, by filling out the form below.</p>
+                        <div class="clearfix">
+                            <form method="post" action="about.php">
+                                <div class="contact-info clearfix">
+                                    <div class="form-input clearfix"><label>Name:</label><br>
+                                    <input class="text" type="text" name="name" value=""><br>
+                                    <span class="error"><?php echo $nameError;?></span></div>
+                                    <div class="form-input"><label>Email:</label><br>
+                                    <input class="text" type="text" name="email" value=""><br>
+                                    <span class="error"><?php echo $emailError;?></span></div>
+                                    <div class="form-input"><label>Subject:</label><br>
+                                    <input class="text" type="text" name="subject" value=""><br>
+                                    <span class="error"><?php echo $subjectError;?></span></div>
+                                </div>
+                                <div class="contact-message clearfix">
+                                    <div class="form-input"><label>Message:</label><br>
+                                        <textarea name="message" val=""></textarea>
+                                        <span class="error"><?php echo $messageError;?></span><br>
+                                    </div>
+                                </div>
+                                <input class="formButton" type="submit" name="submit" value="Say Hello"><br>
+                                <span class="success"><?php echo $successMessage;?></span>
+                            </form>
+                        </div>
                     </div>
                  </section><!-- /.east -->
             </section><!-- /.double-column -->

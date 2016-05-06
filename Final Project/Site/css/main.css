@@ -1013,11 +1013,24 @@ nav .nav-active a:hover {
       margin: 0;
     } 
 
-    .double-column .east .east-inner p,
-    .double-column .east .east-inner form{
-      width: 79%;
+    .double-column .east .east-inner p{
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
+    }
+
+    .double-column .east .east-inner .contact-info,
+    .double-column .east .east-inner .contact-message{
+      display: inline-block;
+      margin: 0;
+      padding: 0 10px;
+      width: 50%;
+      vertical-align: top;
+      float: left;
+    }
+
+    .east-inner textarea{
+      height: 202px;
     }
 
     /* hamburger-icon lines*/
@@ -1054,6 +1067,33 @@ nav .nav-active a:hover {
 
 }
 
+@media screen and (max-width: 620px)
+    {
+
+      .double-column .east .east-inner .contact-info,
+      .double-column .east .east-inner .contact-message{
+        display: block;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        vertical-align: top;
+        float: none;
+      }
+
+      .double-column .east .east-inner p,
+      .double-column .east .east-inner form{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .east-inner textarea{
+      height: 100px;
+      }
+    }
+
 @media screen and (max-width: 400px)
     {
 
@@ -1081,6 +1121,8 @@ nav .nav-active a:hover {
       .roll-line input[type="button"]{
         margin: 0 1px;
       }
+
+
 
     }
 
@@ -1129,13 +1171,6 @@ nav .nav-active a:hover {
 
       .single-column .question{
         margin-top: 10px;
-      }
-
-      .double-column .east .east-inner p,
-      .double-column .east .east-inner form{
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
       }
 
     }
