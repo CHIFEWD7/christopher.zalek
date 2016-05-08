@@ -718,12 +718,16 @@ nav .nav-active a:hover {
   margin: 50px 0 0 0;
 }
 
-.error, .success{
+.alert, .success{
   font-size: 20px;
   font-size: 1rem;
 }
 
-.error{
+.mail-status{
+  margin: 5px 0 0 0;
+}
+
+.alert{
   color: #f00;
 }
 
@@ -1013,12 +1017,6 @@ nav .nav-active a:hover {
       margin: 0;
     } 
 
-    .double-column .east .east-inner p{
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
     .double-column .east .east-inner .contact-info,
     .double-column .east .east-inner .contact-message{
       display: inline-block;
@@ -1030,7 +1028,7 @@ nav .nav-active a:hover {
     }
 
     .east-inner textarea{
-      height: 202px;
+      height: 206px;
     }
 
     /* hamburger-icon lines*/
@@ -1083,10 +1081,14 @@ nav .nav-active a:hover {
       }
 
       .double-column .east .east-inner p,
-      .double-column .east .east-inner form{
+      .double-column .east .east-inner .formContact{
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .double-column .east .east-inner p{
+        /* text-align: center; */
       }
 
       .east-inner textarea{
