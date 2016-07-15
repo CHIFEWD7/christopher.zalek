@@ -394,7 +394,7 @@ nav .nav-active a:hover {
 }
 
 .roll-line input[type="qty"]{
-  width: 80px;
+  width: 95px;
   height: 50px;
   font-size: 25px;
   font-size: 1.25rem;
@@ -414,7 +414,7 @@ nav .nav-active a:hover {
 }
 
 .roll-line select{
-  width: 80px;
+  width: 95px;
   height: 50px;
   font-size: 25px;
   font-size: 1.25rem;
@@ -434,7 +434,7 @@ nav .nav-active a:hover {
 }
 
 .roll-line input[type=button]{
-  width: 80px;
+  width: 95px;
   height: 50px;
   font-size: 25px;
   font-size: 1.25rem;
