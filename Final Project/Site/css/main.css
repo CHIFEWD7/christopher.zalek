@@ -1,4 +1,5 @@
-/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+ 
+ /*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -9,11 +10,30 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+  font-family: campton-bold;
+  src: url('../fonts/campton-bold.woff') format('woff');
+}
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    content: ".";
+
+    visibility: hidden;
 }
 
 /*
@@ -94,21 +114,1068 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #0a1a64;
+    background-image: url("../img/site-bkg.png");
+    background-repeat: repeat-x;
+    background-color: #c7e0ea;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-size: 1rem;
+    color: #0a1a64;
+}
+
+h1{
+    font-size: 34px;
+    font-size: 1.7rem;
+    margin: 0 15px 15px 15px;
+
+}
+
+h2{
+    margin: 30px 0 15px 0;
+}
+
+h3{
+  display: inline;
+}
+
+.header-icon{
+  margin: 0px 2px 6px 0;
+}
+
+p,
+span{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #6e738a;
+    font-weight: normal;
+    font-size: 20px;
+    font-size: 1rem;
+    line-height: 32px;
+    line-height: 1.6rem;
+    margin: 0 0 10px 0;
+}
+
+p:last-child{
+    margin-bottom: 30px;
+}
+
+/* Layout */
+
+ul, li{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+.site{
+    max-width: 960px;    
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+}
+
+.single-column,
+.double-column,
+.get-rolling,
+.roll-counter,
+.south{
+    /*border: 1px solid #ccc;*/
+    padding: 10px;
+    margin: 10px;
+}
+
+.north{
+    background-color: #0a1a64;
+    border-bottom: solid 4px #fbd334;
+}
+
+.logo{
+    display: inline-block;
+    width: 226px;
+    height: 50px;
+    background: url("../img/ggb-logo.png");
+    background: url("../img/ggb-logo.svg");
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    overflow: hidden;
+    margin: 15px 0 16px 30px;
+}
+
+/* Navigation
+   ================================================================ */
+nav {
+  float: right;
+  padding-left: 30px;
+  text-align: right;
+  margin: 0 30px 0 0;
+}
+
+main-navigation {
+  display: block;
+}
+
+nav li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #6981ee;
+  padding: 38px 20px 25px 20px;
+  transition: all 300ms ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #6981ee;
+}
+
+nav .nav-active{
+  border-top: solid 6px #15B832;
+}
+
+nav .nav-active a{
+  color: #fff;
+  padding: 33px 20px 24px 20px;
+}
+
+nav .nav-active a:hover {
+  color: #fff;
+  background-color: #0A1A64;
+}
+
+
+/* Layouts - Single-Colunn
+   ================================================================ */
+.single-column .question{
+    width: 33.33%;
+    float: left;
+    padding: 5px;
+    color: #5d73d6;
+    font-size: 15px;
+    font-size: 0.75rem;
+    margin-top: 25px;
+}
+
+.single-column .question p{
+    color: #5d73d6;
+}
+
+.single-column{
+    padding: 40px 20px 0 20px;
+}
+
+.single-column .question .question-inner{
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+
+}
+
+.single-column .question .question-inner img{
+    width: 100%;
+    margin: 0 0 10px 0;
+
+}
+
+.get-rolling{
+  margin: 0 10px;
+}
+
+.roll-counter{
+  margin: 0 10px 25px 10px;
+}
 
 
 
+.get-rolling p,
+.roll-counter p{
+    font-size: 22px;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    color: #0a1a64;
+    font-weight: bold;
+}
+
+.get-rolling p{
+  margin: 0;
+}
+
+.roll-counter h1{
+  font-family: Campton-bold;
+}
+
+.single-column .roll-setup {
+    float: left;
+    width: 60%;
+    padding: 5px;
+}
+
+.single-column .roll-results {
+    float: right;
+    width: 40%;
+    padding: 5px;
+}
+
+.single-column .roll-setup .setup-inner,
+.single-column .roll-results .results-inner {
+    /*border: 1px solid #ccc; */
+  padding: 10px;
+}
+
+.setup-header{
+  margin: 25px 0 30px 0;
+  padding: 21px 0 0 0;
+  border-top: solid 1px #ddd;
+}
+
+.setup-header h2{
+  float: left;
+  display: inline;
+  margin: 0px;
+  padding: 4px 0 0 0;
+}
+
+.menu {
+  float: right;
+  display: inline;
+}
+
+
+/* Die Set Content - Field, Dropdown & Label
+   ================================================================ */
+
+
+/* Roll lines */
+.roll-line{
+  margin: 0 0 25px 0;
+
+}
+
+.roll-line .label,
+.formula p{
+  color: #4A86E8;
+    font-size: 25px;
+  font-size: 1.25rem;
+}
+
+.roll-line .label{
+  display: inline-block;
+  padding: 15px 0 0 0;
+  margin: 0 0 0 10px;
+}
+
+.roll-line div {
+  display: inline-block;
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.roll-line input[type="qty"]{
+  width: 95px;
+  height: 50px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  text-align: right;
+  background-color: #C9DAF8;
+  appearance: none;
+  box-shadow: none;
+  padding-right:10px;
+  margin: 0 0 0 10px;
+  border: solid 3px #fff;
+  transition: border 0.3s;
+}
+
+.roll-line input[type="qty"]:focus{
+  outline: none;
+  border: solid 3px #4A86E8;
+}
+
+.roll-line select{
+  width: 95px;
+  height: 50px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  text-align: left;
+  background-color: #ead1dc;
+  appearance: none;
+  box-shadow: none;
+  padding-left: 5px;
+  margin: 0 0 0 10px;
+  border: solid 3px #fff;
+  transition: border 0.3s;
+}
+
+.roll-line select:focus{
+  outline: none;
+  border: solid 3px #4A86E8;
+}
+
+.roll-line input[type=button]{
+  width: 95px;
+  height: 50px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  background-color:#253ba4;
+  margin: 0 0 0 10px;
+  color: #C9DAF8;
+  font-weight: bold;
+  border: solid 3px #FFFFFF;
+  transition: border 0.3s;
+}
+
+.roll-line input[type=button]:focus{
+  outline: none;
+  border: solid 3px #4A86E8;
+}
+
+.formula{
+  text-align: center;
+  border-top: solid 1px #ddd;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.roll-button,
+.roll-button:visited {
+  font-family: Campton-bold, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 75%;
+  padding: 25px 0 20px 0;
+  margin: 40px auto;
+  text-align: center;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  color: #fff;
+  outline: 0;
+  border: solid 4px #fff;
+  border-radius: 6px;
+  background: #15b832;
+}
+
+.roll-button:focus{
+  outline: none;
+  border: solid 4px #4ae886;
+}
+
+/*  Roll Results
+   ================================================================ */
+
+.text-center{
+  text-align: center;
+}
+
+.results-inner .text-center{
+  padding: 30px 0 0 0;
+  border-top: solid 1px #F9CB9C;
+  border-bottom: solid 1px #F9CB9C;
+  margin: 0 0 30px 0;
+
+}
+
+.single-column .roll-results .results-header{
+  /*border: 1px solid #ccc;*/
+  margin: 0 10px 0px 10px;
+  padding: 15px 20px 9px 20px;
+  background-color: #FF9900;
+  border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+
+.single-column .roll-results .results-inner{
+  /*border: 1px solid #ccc;*/
+  margin: 0 10px 25px 10px;
+  padding: 0px 20px 30px 20px;
+  background-color: #FCE5CD;
+  border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;  
+    -moz-border-radius-bottomright: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+.results-header h3{
+  color: #FCF3E8;
+  font-size: 25px;
+  font-size: 1.25rem;
+}
+
+.results-inner p{
+  color: #E69138;
+}
+
+.range{
+  margin: 30px 0 0 0;
+}
+
+.results-inner p.tally{
+  font-family: Campton-bold;
+  color: #FF9900;
+  font-size: 80px;
+  font-size: 4rem;
+  line-height: 80px;
+  line-height: 4rem;
+  font-weight: bold;
+  margin: 30px 0 20px 0;
+}
+
+.results-empty{
+  background-color: #fcf3e8;
+  padding: 10px;
+  color: #FF9900;
+  font-size: 20px;
+  font-size: 1rem;
+  height: 67px;
+  border: solid 1px #F9CB9C;
+}
+
+.results-details{
+  height: auto;
+}
+
+.results-details p{
+  color: #FF9900;
+  line-height: 1.6rem;
+}
+
+.get-rolling,
+.roll-counter, 
+.south{
+  text-align: center;
+}
+
+/* Layouts - Double-Colunn
+   ================================================================ */
+
+.double-column .west{
+  float: left;
+  width: 60%;
+  padding: 25px 0 0 5px;
+
+}
+
+.double-column .east{
+  float: right;
+  width: 40%;
+  padding: 35px 10px 0 0;
+}
+
+.double-column .west .west-inner{
+    /*order: 1px solid #ccc;*/
+  margin: 0 5px 0 15px;
+  padding: 5px;
+}
+
+.double-column .west .west-inner h1{
+  margin: 0 0 35px 0;
+}
+
+.west-inner ul{
+  font-size: 20px;
+  font-size: 1rem;
+  margin: 0 0 10px 10px;
+}
+
+.west-inner ul li{
+  color: #0a1a64;
+  list-style-type: none;
+  line-height: 36px;
+  line-height: 1.8rem;
+
+}
+
+.west-inner ul li a{
+    color: #5d73d6;
+    text-decoration: none;
+}
+
+.full-width{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.profile{
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0 20px 10px 0;
+}
+
+.double-column .east .contact-header{
+  /*border: 1px solid #ccc;*/
+  margin: 0 15px;
+  padding: 15px 20px 9px 20px;
+  background-color: #f1c232;
+  border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+
+.contact-header h3{
+  color: #FFFCF2;
+  font-size: 25px;
+  font-size: 1.25rem;
+}
+
+.double-column .east .east-inner{
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 8px;*/
+    margin: 0 15px;
+    padding: 25px 20px 30px 20px;
+    background-color: #FFF2CC;
+    border-bottom-left-radius: 8px;
+      -moz-border-radius-bottomleft: 8px;
+      -webkit-border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+      -moz-border-radius-bottomright: 8px;
+      -webkit-border-bottom-right-radius: 8px;
+}
+
+.double-column .east .east-inner p{
+   padding: 0 0 10px 0;
+   color: #BF9000;
+}
+
+.east-inner h3{
+  color: #f1c232;
+  font-size: 25px;
+  font-size: 1.25rem;
+}
+
+
+.east-inner input[type=text]{
+  width: 100%; 
+  margin: 2px 0 6px 0;
+  border: 0;
+  height: 40px;
+  background: #fffcf2;
+  color: #7F6000;
+  padding: 5px;
+  font-size: 20px;
+  font-size: 1.0rem
+}
+
+.east-inner input[type=text]:focus{
+  outline: 2.5px solid #F1C232;
+}
+
+.east-inner textarea{
+  width: 100%; 
+  margin: 2px 0;
+  border: 0;
+  background: #fffcf2;
+  color: #7F6000;
+  padding: 5px;
+  font-size: 20px;
+  font-size: 1.0rem;
+  height: 100px;
+}
+
+.east-inner textarea:focus{
+  outline: 2.5px solid #F1C232;
+}
+
+.east-inner .form-input{
+  margin: 10px 0 0 0;
+}
+
+.east-inner label{
+  color: #BF9000;
+  font-size: 20px;
+  font-size: 1rem;
+  margin: 50px 0 0 0;
+}
+
+.alert, .success{
+  font-size: 20px;
+  font-size: 1rem;
+}
+
+.mail-status{
+  margin: 5px 0 0 0;
+}
+
+.alert{
+  color: #f00;
+}
+
+.success{
+  color: #F1C232;
+}
+
+.formButton[type=submit] {
+  font-family: Campton-bold, Helvetica, Arial, sans-serif;
+  margin: 20px auto 0 auto;
+  padding: 5px 0 0 0;
+  text-decoration: none;
+  background: #fbd334;
+  border: none;
+  color: #ffffff;
+  border-radius: 3px;
+  outline: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.south{
+  background-color: #4eb6cf;
+  color: #fff;
+  padding: 22px;
+  font-size: 20px;
+  font-size: 1.0rem;
+  margin: 10px 0 0 0;
+}
+
+.south span{
+  color: #9fecff;
+}
+
+/* Banner */
+
+.banner{
+  border-top: solid 4px #fff;
+  height: 193x;
+    /*text-indent: -999px;*/
+}
+
+.banner .wrapper{
+  overflow: hidden;
+}
+
+
+/* Buttons
+   ================================================================ */
+.button,
+.button:visited {
+  font-family: Campton-bold, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 33.33%;
+  padding: 25px 0 20px 0;
+  margin: 40px auto;
+  text-align: center;
+  letter-spacing: 1px;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background: #29A9E1;
+}
+
+.hamburger-icon {
+      float: right;
+      display: none;
+      margin: 33px 30px 0 0;
+}
+
+/* hamburger-icon lines*/
+.line {
+      width: 40px;
+      height: 5px;
+      border-radius: 40px;
+      width: 2rem;
+      height: .25rem;
+      background: #fbd334;
+      border-radius: 2rem;
+      margin-bottom: .25em;
+      opacity: 1;
+      /* 1. Set the transition property on the .line class */
+      transition: all 300ms ease;
+}
+
+/* Radio button */
+.dieSets-radio{
+  float: right;
+}
+
+.dieSets-radio p{
+  display: inline;
+  font-size: 20px;
+  font-size: 1rem;
+  color: #0a1a64;
+}
+
+.dieSets-radio input[type="radio"] {
+    display:none;
+}
+
+.dieSets-radio input[type="radio"] + label {
+  font-size: 20px;
+  font-size: 1rem;
+    color: #0a1a64;
+    cursor: pointer;
+}
+
+.dieSets-radio input[type="radio"] + label span {
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    margin:-1px 4px 0 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+/* The trick: border creates same look as the radio button usually have */
+/* remove it to see what happens */
+.dieSets-radio input[type="radio"] + label span {
+    background-color: #C9DAF8; /* have to be of the same color */
+    border: 3px solid #C9DAF8; /* have to be of the same color */
+}
+
+/* Checked state for radio */
+.dieSets-radio input[type="radio"]:checked + label span {
+     background-color: #253ba4;
+}
+
+
+/* Mobile Layout */
+@media screen and (max-width: 780px)
+    {
+
+    .north {
+        padding-bottom: 0;
+    }
+
+    nav{
+        padding: 0px;
+    }
+
+    nav a {
+        display: block;
+        text-decoration: none;
+        font-size: 30px;
+        font-size: 1.5rem;
+        border: solid 1px #6981ee;
+        background-color: #293d98;
+        color: #6981ee;
+        padding: 12px 0 8px 0;
+    }
+
+    nav .nav-active{
+      border-top: none;
+      border-bottom: solid 4px #15B832;
+    }
+
+    nav .nav-active a{
+
+      border: none;
+      background-color: #0A1A64;
+      padding: 11px 10px 7px 10px;
+    }
+
+    nav .nav-active a:hover {
+      color: #fff;
+      background-color: #0A1A64;
+    }
+
+    .main-navigation {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-navigation ul {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .main-navigation ul li {
+        display: block;
+        float: none;
+        width: 50%;
+        padding: 0;
+        margin: 15px auto;
+    }
+
+    .banner{
+      height: 157px;
+      border-top: 4px solid #fff;
+    }
+
+    .banner .wrapper{
+      height: 157px;
+    }
+
+    .banner .wrapper img{
+      width: 780px;
+      height: 157px;
+    }
+
+    .single-column{
+      margin: 10px 0;
+    }
+
+    .single-column .question{
+      margin: 0;
+    }
+
+    .single-column .question .question-inner{
+      padding-bottom: 0;
+    }
+
+    .single-column .question,
+    .single-column .roll-setup,
+    .single-column .roll-results{
+        float: left;
+        width: 100%;
+    }
+
+    .single-column .roll-results .results-inner .text-center,
+    .single-column .roll-results .results-inner .results-empty{
+      width: 79%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .single-column .question p{
+    text-align: center;
+    }
+
+    .button,
+    .button:visited {
+        width: 75%;
+    }
+
+    .results-header{
+        text-align: center;
+        margin: 0px;
+    }
+
+    .results-inner h3,
+    .results-inner p,
+    .east-inner h3,
+    .results-details{
+      text-align: center;
+    }
+
+    .double-column .west{
+      width: 100%;
+      padding: 20px 10px 0 10px;
+    }
+
+    .double-column .east{
+      float: left;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0px 10px 0 10px;
+    }
+
+    .double-column .west .west-inner{
+    /*border: 1px solid #ccc;*/
+      margin: 0 0 10px 0;
+      padding: 5px;
+
+    }
+
+    .double-column .east{
+      padding: 0px 15px;
+    }
+
+    .double-column .east .contact-header{
+      /*border: 1px solid #ccc;*/
+      text-align: center;
+      margin: 0;
+    }
+
+    .double-column .east .east-inner{
+    /*border: 1px solid #ccc;*/
+      margin: 0;
+    } 
+
+    .double-column .east .east-inner .contact-info,
+    .double-column .east .east-inner .contact-message{
+      display: inline-block;
+      margin: 0;
+      padding: 0 10px;
+      width: 50%;
+      vertical-align: top;
+      float: left;
+    }
+
+    .east-inner textarea{
+      height: 206px;
+    }
+
+    /* hamburger-icon lines*/
+
+      /* Second line */
+      .active .line:nth-child(2) {
+        /* 2. When the active class is added to the .hamburger-icon, fade the middle line out (hint: you can use the 'opacity' property). */
+        opacity: 0;
+      }
+
+      /* Top line */
+      .active .line:first-child {
+        /* 3. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line 45 deg*/
+        -ms-transform: rotate(-45deg); /* IE 9 */
+          -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+          transform: rotate(-45deg);
+        /* 4. Use the CSS 'transform-origin' property to set the center of rotation.*/
+        -ms-transform-origin: 90% 50%; /* IE 9 */
+          -webkit-transform-origin: 90% 50%; /* Chrome, Safari, Opera */
+          transform-origin: 90% 50%;
+      }
+
+      /* Bottom line */
+      .active .line:last-child {
+        /* 5. When the active class is added to the .hamburger-icon, use the css 'transform' property to rotate the first line -45 deg*/
+        -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+        /* 6. Use the CSS 'transform-origin' property to set the center of rotation.*/
+        -ms-transform-origin: 90% 50%; /* IE 9 */
+          -webkit-transform-origin: 90% 50%; /* Chrome, Safari, Opera */
+          transform-origin: 90% 50%;
+      }
+
+}
+
+@media screen and (max-width: 620px)
+    {
+
+      .double-column .east .east-inner .contact-info,
+      .double-column .east .east-inner .contact-message{
+        display: block;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        vertical-align: top;
+        float: none;
+      }
+
+      .double-column .east .east-inner p,
+      .double-column .east .east-inner .formContact{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .double-column .east .east-inner p{
+        /* text-align: center; */
+      }
+
+      .east-inner textarea{
+      height: 100px;
+      }
+    }
+
+@media screen and (max-width: 400px)
+    {
+
+      .roll-line .label{
+        margin: 0;
+        display: block;
+        text-align: center;
+      }
+
+      .roll-line div {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+      }
+
+      .roll-line input[type="qty"]{
+        margin: 0 1px;
+      }
+
+      .roll-line select{
+        margin: 0 1px;
+      }
+
+      .roll-line input[type="button"]{
+        margin: 0 1px;
+      }
 
 
 
+    }
 
 
+@media screen and (max-width: 375px)
+    {
 
+      .north {
+        border-bottom: solid 3px #fbd334;
+      }
 
+      .logo{
+        display: inline-block;
+        width: 181px;
+        height: 40px;
+        background: url("../img/ggb-logo-80.png");
+        background: url("../img/ggb-logo.svg");
+        text-indent: -999px;
+        margin: 17px 0 13px 20px;
+        background-repeat: no-repeat;
+      }
 
+      .hamburger-icon{
+        margin: 28px 20px 0 0;
+      }
 
+      .banner{
+        height: 75px;
+        border-top: solid 3px #fff;
+      }
 
+      .banner .wrapper{
+        height: 75px;
+      }
 
+      .banner .wrapper img{
+        width: 375px;
+        height: 75px;
+      }
 
+      .button,
+      .button:visited {
+        width: 100%;
+        margin: 40px auto;
+      }
+
+      .single-column .question{
+        margin-top: 10px;
+      }
+
+    }
 
 
 /* ==========================================================================
